@@ -1,23 +1,16 @@
 <template>
   <el-row class="arcblock-main">
-    <el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>详情</el-breadcrumb-item>
-    </el-breadcrumb>
-    <div class="main-title">TokenStars TEAM (TEAM)</div>
-    <el-tabs v-model="activeName" @tab-click="handleClick" class="main-content">
-      <el-tab-pane label="
-Details" name="second">
-        <el-col>
-        </el-col>
-      </el-tab-pane>
-      <el-tab-pane label="Overview
-" name="first">
-      <eol-col class="overview-title">Crowdsale</eol-col>
-      </el-tab-pane>
-
-
-    </el-tabs>
+  <el-col class="main-top-left">
+    <el-col class="left-container">
+      <el-col class="main-title">
+        <img src="../../../assets/banner01.png" alt="">
+        <span class="main-word">Fire Lotto (PrelCO)</span>
+      </el-col>
+      <el-col></el-col>
+      <el-col></el-col>
+    </el-col>
+  </el-col>
+    <el-col class="main-top-right"></el-col>
   </el-row>
 </template>
 
@@ -25,35 +18,55 @@ Details" name="second">
   export default {
   data(){
     return{
-      activeName: 'second'
     }
   },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
+
     }
   }
 </script>
 
 <style scoped lang="less">
-    .arcblock-main{
-      padding: 0 5%;
-      .main-content{
-        border: 1px solid #E5E5E5;
+  .arcblock-main{
+    /*padding: 10%;*/
+    width: 72%;
+    /*width: 100%;*/
+    height: 615px;
+    margin: 0 auto;
+      .main-top-left{
+        width: 50.2%;
+        height: 500px;
+        background-color: green;
+        float: left;
+          .main-title{
+            height: 101px;
+            height: 100%;
+            background-color: blue;
+            margin-top: 109px;
+            img{
+              height: 101px;
+              width: 101px;
+              float: left;
+              margin: 0 31px;
+            }
+            .main-word{
+              clear: both;
+              display: inline-block;
+              height: 101px;
+              line-height: 101px;
+              font-size: 36px;
+              letter-spacing: 0;
+              /*margin-left: 31px;*/
+            }
+          }
       }
-      .main-title{
-        font-size: 40px;
-        font-weight: 200;
-
-      }
-      .overview-title{
-        font-size: 22px;
-        font-weight: 400;
-        color: rgb(146,163,183);
-        font-family: "DINPro-Light";
-        border-bottom: 1px solid #E5E5E5;
-      }
+    .main-top-right{
+      width: 49.8%;
+      height: 500px;
+      background-color: greenyellow;
+      float: left;
     }
+
+  }
 
 </style>

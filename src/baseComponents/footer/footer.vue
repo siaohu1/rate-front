@@ -34,20 +34,20 @@
 <style lang="less">
 .footer{
   width: 100%;
-  height: 292px;
+  height: 2.92rem;
   background: #3C7BE3 linear-gradient(-180deg, rgba(255,255,255,0.19) 0%, rgba(0,0,0,0.12) 95%);
   position: relative;
 }
-.footer-content{width: 24%;position: absolute;top: 92px;left:40%;}
+.footer-content{width: 24%;position: absolute;top: .92rem;left:40%;}
 .contact{display: flex;justify-content:space-around;}
-.slogan{margin-top: 22px;
+.slogan{margin-top: .22rem;
           p{
             text-align: center;
             font-family: "PingFangSC-Medium";
-            font-size: 16px;
+            font-size: .16rem;
             color: #FFFFFF;
             letter-spacing: 0;
-            line-height: 22px;
+            line-height: .22rem;
           }
         }
 </style>

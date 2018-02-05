@@ -25,19 +25,20 @@
 <style lang="less" scoped>
   .header{
     background-color: #3C7BE3;
-    height: 80px;
-    line-height: 80px;
+    height: .8rem;
+    line-height: .8rem;
     display: flex;
     justify-content: center;
     .wrapper{
       width:70%;
       height: 80px;
       .logo{
-        width: 52px;
-        height: 52px;
+        display: block;
+        width: .52rem;
+        height: .52rem;
         float: left;
-        margin-top: 14px;
-        /*background: url("../../assets/logo.png");*/
+        margin-top: .14rem;
+        line-height: .8rem;
       }
       .header-nav{
         width: 80%;
@@ -50,7 +51,7 @@
           a{
             text-decoration: none;
             color:#ffffff;
-            font-size: 20px;
+            font-size: 0.2rem;
             font-family: "PingFangSC-Medium";
           }
         }

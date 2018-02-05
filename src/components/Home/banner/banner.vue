@@ -55,17 +55,18 @@
 
 <style  lang="less">
   .banner{
-    height: 532px;
+    height: 5.32rem;
     opacity: 0.5;
     /*background-image: linear-gradient(-242deg, rgba(5,90,229,0.02) 6%, #320773 63%);*/
+    position: relative;
     .swiper-pagination{
       height: 10%;
       position: absolute;
-      bottom: 10px;
+      top: 4.56rem;
       span{
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: .2rem;
+        height: .2rem;
         background-color: white;
       }
     }
@@ -73,22 +74,22 @@
       position: absolute;
       width: 39.4%;
       left: 31.25%;
-      top: 191px;
+      top: 1.91rem;
       z-index: 99;
       p{
-        font-size: 36px;
+        font-size: .36rem;
         text-align: left;
         font-family: "PingFangSC-Light";
         color: rgba(255,255,255,0.87);
-        line-height: 48px;
+        line-height: .48rem;
       }
       span{
-        font-size: 20px;
+        font-size: .2rem;
         color: #ffffff;
         float: right;
         font-family: "PingFangSC-Light";
         color: rgba(255,255,255,0.87);
-        line-height: 48px;
+        line-height: .48rem;
       }
     }
 

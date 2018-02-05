@@ -177,28 +177,28 @@
     padding: 0 15%;
     .sreach{
       width: 100%;
-      margin: 38px 0px;
-      height: 64px;
+      margin: .38rem 0;
+      height: .64rem;
     center{
       height: 100%;
       form{
-        width: 25%;
-        height: 100%;
+        width: 4.8rem;
+        height: .64rem;
         position: relative;
         img{
           position: absolute;
-          width: 40px;
-          height: 40px;
-          top: 13px;
-          left: 84.58%;
+          width: .4rem;
+          height: .4rem;
+          top: .13rem;
+          right: 0rem;
         }
         input{
           width:100%;
           height: 100%;
           border-radius: 85px;
-          font-size: 20px;
+          font-size: .2rem;
           color: #808080;
-          padding-left:34px;
+          padding-left:.34rem;
           border: none;
           outline: none
         }
@@ -211,7 +211,7 @@
   /*.sreach center form input{width:100%;height: 100%;border-radius: 85px;font-size: 20px;color: #808080;padding-left:34px;border: none;outline: none}*/
   /*.sreach form img{position: absolute;width: 40px;height: 40px;top: 13px;left: 84.58%;}*/
   .content{width:100%;;margin: 0 auto;}
-  .plate{width:100%;height:1390px;margin-bottom: 38px;}
+  .plate{width:100%;height:13.90rem;margin-bottom: 38px;}
   .plate-left{width: 63%; float: left;}
   .plate-left-top{width: 100%;}
   .plate-left-bottom{width: 100%;height:270px;margin-top: 19px;display: inline-block;}
@@ -283,12 +283,15 @@
   }
   .load-more{
     text-align: center;
+    margin-bottom: 20px;
   }
   .load-more a{
     color: #3C7BE3;
     font-size: 16px;
     line-height: 22px;
     font-family: "PingFangSC-Regular";
+    display: inline-block;
+    height: 22px;
   }
 
 
