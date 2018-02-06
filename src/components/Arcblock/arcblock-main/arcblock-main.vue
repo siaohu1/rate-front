@@ -1,23 +1,189 @@
 <template>
+  <div class="arc-main">
+  <div class="main-top">
   <el-row class="arcblock-main">
   <el-col class="main-top-left">
-    <el-col class="left-container">
-      <el-col class="main-title">
+      <el-col class="main-left-title">
         <img src="../../../assets/banner01.png" alt="">
         <span class="main-word">Fire Lotto (PrelCO)</span>
       </el-col>
-      <el-col></el-col>
-      <el-col></el-col>
+      <el-col class="main-left-center">
+      <p >就像Facebook连接好友和LinkedIn连接专业人士一样，目前的TraDove平台将业务合作伙伴与其业务社交网络连接起来。下一代平台将利用区块链和人工智能驱动的社交网络技术，进一步缩短企业买方和卖方的发现周期，提高B2B透明度，扩大用户信任，并允许公司到公司之间的精准广告。此外，BBCoin将为国际贸易提供更好的支付工具。我们已经经营了5年，现在在全球有25万个企业用户。我们很荣幸地宣布TraDove已经筹集了400万美元的股权投资。</p>
+      </el-col>
+      <el-col class="main-left-img">
+        <ul>
+          <li>
+          <a href="">
+            <img src="../../../assets/icon/微信.png" alt="">
+          </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icon/in.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icon/facebook-f.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icon/邮件.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icon/emi纸飞机.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../../../assets/icon/微博.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </el-col>
     </el-col>
-  </el-col>
-    <el-col class="main-top-right"></el-col>
+    <el-col class="main-top-right">
+      <div class="top-right-top">
+        <h1>9.0</h1>
+        <p>还剩15小时3分</p>
+        <div><span>2018-01-15</span>-<span>2018-02-15</span></div>
+      </div>
+      <div class="top-right-bottom">
+        <ul>
+          <li>代币<span>BBCion</span></li>
+          <li>价格<span>1 BBCoin = 0.12美元</span></li>
+          <li>价钱<span>1 BBCoin = 0.16美元</span></li>
+          <li>奖金<span>可得到</span></li>
+          <li>赏金<span>可得到</span></li>
+          <li>平台<span>复仇</span></li>
+          <li>验收<span>BTC ,ETH ,菲亚特</span></li>
+          <li>最小的投资<span>240美元</span></li>
+          <li>软帽<span>200万美元</span></li>
+          <li>硬帽子<span>52,000,000美元</span></li>
+          <li>国家<span>美国</span></li>
+        </ul>
+      </div>
+    </el-col>
   </el-row>
+  </div>
+    <div class="main-bottom">
+      <!--<div class="bottom-productions">-->
+        <h1>章节</h1>
+      <el-tabs :tab-position="tabPosition" style="height: 200px;">
+        <el-tab-pane label="用户管理" lebel-left>
+          <p>详情
+            我们将Scorum项目分配给“稳定”评级，并向意识到本评价中发现的风险的中长期投资者推荐购买SCR代币。只有在对项目感兴趣的投资者人数大幅增加的情况下，参加ICO才能进行短期投机。
+
+            Scorum是体育博客的平台，用户不仅可以通过发布原创内容，而且可以通过积极的讨论和投票获得收益。主要思想是从Steemit项目中借用，但SCR令牌的排放是有限的，项目的功能将会更加多样化。
+
+            我们认为，这个团队拥有实施这些想法的所有必要技能，潜在市场的数量可以使其达到理想的访问水平。
+
+            不过，我们相信，这项1,700万元的硬性上限对于服务的实施来说，是过分夸大了，基本模式已经发明，只需要细化。我们认为这个数量的需求是不合理的，并且没有提供对网站未来运作的财务和经济模型的预测，这可能对SCR令牌的基本价值产生负面影响。
+
+            此外，该平台的博彩功能在几乎所有国家都面临着与该领域的严格立法相关的额外风险，这妨碍了我们给予Scorum项目更高的评级。
+
+            有关项目和ICO的一般信息
+            Scorum是一个以体育为主题的博客平台的项目，扩展了一个统计中心，博彩交易所和幻想体育联盟的形式。该平台的主要思想是从Steemit项目借用，Scorum用户将获得奖励创造的内容，如发表的文章和各种体育照片，读者可以赚取更新和评论。
+
+            统计中心的设计旨在简化高质量体育内容的创建，使作者能够方便地在其文章中使用统计数据，分析数据，照片和交互式可视化数据，读者将能够为自己喜爱的球队和球员找到结果。
+
+            博彩交易所也将在门户网站上提供，用户可以在没有中间人的情况下下注体育比赛。
+
+            博客平台上用户报酬系统采用区块链技术，它将通过两种类型的代币 - 在ICO期间将出售的Scorum Coins（SCR）和Scorum Power（SP）来完成，后者将具有专门的基础设施角色，并将用于系统内参与者的交互。Scorum和Steemit经济体之间的主要区别在于SCR和SP令牌的排放严格限制在预定的数量。
+
+            Scorum公司成立于2017年，其研发中心位于白俄罗斯的明斯克。所有国家都可以参加ICO，包括美国公民; SCR代币不是证券的法律意见可以在网站上找到。
+
+          </p>
+        </el-tab-pane>
+        <el-tab-pane label="配置管理">
+          <p>详情
+            我们将Scorum项目分配给“稳定”评级，并向意识到本评价中发现的风险的中长期投资者推荐购买SCR代币。只有在对项目感兴趣的投资者人数大幅增加的情况下，参加ICO才能进行短期投机。
+
+            Scorum是体育博客的平台，用户不仅可以通过发布原创内容，而且可以通过积极的讨论和投票获得收益。主要思想是从Steemit项目中借用，但SCR令牌的排放是有限的，项目的功能将会更加多样化。
+
+            我们认为，这个团队拥有实施这些想法的所有必要技能，潜在市场的数量可以使其达到理想的访问水平。
+
+            不过，我们相信，这项1,700万元的硬性上限对于服务的实施来说，是过分夸大了，基本模式已经发明，只需要细化。我们认为这个数量的需求是不合理的，并且没有提供对网站未来运作的财务和经济模型的预测，这可能对SCR令牌的基本价值产生负面影响。
+
+            此外，该平台的博彩功能在几乎所有国家都面临着与该领域的严格立法相关的额外风险，这妨碍了我们给予Scorum项目更高的评级。
+
+            有关项目和ICO的一般信息
+            Scorum是一个以体育为主题的博客平台的项目，扩展了一个统计中心，博彩交易所和幻想体育联盟的形式。该平台的主要思想是从Steemit项目借用，Scorum用户将获得奖励创造的内容，如发表的文章和各种体育照片，读者可以赚取更新和评论。
+
+            统计中心的设计旨在简化高质量体育内容的创建，使作者能够方便地在其文章中使用统计数据，分析数据，照片和交互式可视化数据，读者将能够为自己喜爱的球队和球员找到结果。
+
+            博彩交易所也将在门户网站上提供，用户可以在没有中间人的情况下下注体育比赛。
+
+            博客平台上用户报酬系统采用区块链技术，它将通过两种类型的代币 - 在ICO期间将出售的Scorum Coins（SCR）和Scorum Power（SP）来完成，后者将具有专门的基础设施角色，并将用于系统内参与者的交互。Scorum和Steemit经济体之间的主要区别在于SCR和SP令牌的排放严格限制在预定的数量。
+
+            Scorum公司成立于2017年，其研发中心位于白俄罗斯的明斯克。所有国家都可以参加ICO，包括美国公民; SCR代币不是证券的法律意见可以在网站上找到。
+
+          </p>
+        </el-tab-pane>
+        <el-tab-pane label="角色管理">
+          <p>详情
+            我们将Scorum项目分配给“稳定”评级，并向意识到本评价中发现的风险的中长期投资者推荐购买SCR代币。只有在对项目感兴趣的投资者人数大幅增加的情况下，参加ICO才能进行短期投机。
+
+            Scorum是体育博客的平台，用户不仅可以通过发布原创内容，而且可以通过积极的讨论和投票获得收益。主要思想是从Steemit项目中借用，但SCR令牌的排放是有限的，项目的功能将会更加多样化。
+
+            我们认为，这个团队拥有实施这些想法的所有必要技能，潜在市场的数量可以使其达到理想的访问水平。
+
+            不过，我们相信，这项1,700万元的硬性上限对于服务的实施来说，是过分夸大了，基本模式已经发明，只需要细化。我们认为这个数量的需求是不合理的，并且没有提供对网站未来运作的财务和经济模型的预测，这可能对SCR令牌的基本价值产生负面影响。
+
+            此外，该平台的博彩功能在几乎所有国家都面临着与该领域的严格立法相关的额外风险，这妨碍了我们给予Scorum项目更高的评级。
+
+            有关项目和ICO的一般信息
+            Scorum是一个以体育为主题的博客平台的项目，扩展了一个统计中心，博彩交易所和幻想体育联盟的形式。该平台的主要思想是从Steemit项目借用，Scorum用户将获得奖励创造的内容，如发表的文章和各种体育照片，读者可以赚取更新和评论。
+
+            统计中心的设计旨在简化高质量体育内容的创建，使作者能够方便地在其文章中使用统计数据，分析数据，照片和交互式可视化数据，读者将能够为自己喜爱的球队和球员找到结果。
+
+            博彩交易所也将在门户网站上提供，用户可以在没有中间人的情况下下注体育比赛。
+
+            博客平台上用户报酬系统采用区块链技术，它将通过两种类型的代币 - 在ICO期间将出售的Scorum Coins（SCR）和Scorum Power（SP）来完成，后者将具有专门的基础设施角色，并将用于系统内参与者的交互。Scorum和Steemit经济体之间的主要区别在于SCR和SP令牌的排放严格限制在预定的数量。
+
+            Scorum公司成立于2017年，其研发中心位于白俄罗斯的明斯克。所有国家都可以参加ICO，包括美国公民; SCR代币不是证券的法律意见可以在网站上找到。
+
+          </p>
+        </el-tab-pane>
+        <el-tab-pane label="定时任务补偿">
+          <p>详情
+            我们将Scorum项目分配给“稳定”评级，并向意识到本评价中发现的风险的中长期投资者推荐购买SCR代币。只有在对项目感兴趣的投资者人数大幅增加的情况下，参加ICO才能进行短期投机。
+
+            Scorum是体育博客的平台，用户不仅可以通过发布原创内容，而且可以通过积极的讨论和投票获得收益。主要思想是从Steemit项目中借用，但SCR令牌的排放是有限的，项目的功能将会更加多样化。
+
+            我们认为，这个团队拥有实施这些想法的所有必要技能，潜在市场的数量可以使其达到理想的访问水平。
+
+            不过，我们相信，这项1,700万元的硬性上限对于服务的实施来说，是过分夸大了，基本模式已经发明，只需要细化。我们认为这个数量的需求是不合理的，并且没有提供对网站未来运作的财务和经济模型的预测，这可能对SCR令牌的基本价值产生负面影响。
+
+            此外，该平台的博彩功能在几乎所有国家都面临着与该领域的严格立法相关的额外风险，这妨碍了我们给予Scorum项目更高的评级。
+
+            有关项目和ICO的一般信息
+            Scorum是一个以体育为主题的博客平台的项目，扩展了一个统计中心，博彩交易所和幻想体育联盟的形式。该平台的主要思想是从Steemit项目借用，Scorum用户将获得奖励创造的内容，如发表的文章和各种体育照片，读者可以赚取更新和评论。
+
+            统计中心的设计旨在简化高质量体育内容的创建，使作者能够方便地在其文章中使用统计数据，分析数据，照片和交互式可视化数据，读者将能够为自己喜爱的球队和球员找到结果。
+
+            博彩交易所也将在门户网站上提供，用户可以在没有中间人的情况下下注体育比赛。
+
+            博客平台上用户报酬系统采用区块链技术，它将通过两种类型的代币 - 在ICO期间将出售的Scorum Coins（SCR）和Scorum Power（SP）来完成，后者将具有专门的基础设施角色，并将用于系统内参与者的交互。Scorum和Steemit经济体之间的主要区别在于SCR和SP令牌的排放严格限制在预定的数量。
+
+            Scorum公司成立于2017年，其研发中心位于白俄罗斯的明斯克。所有国家都可以参加ICO，包括美国公民; SCR代币不是证券的法律意见可以在网站上找到。
+
+          </p>
+        </el-tab-pane>
+      </el-tabs>
+      </div>
+    </div>
+  <!--</div>-->
 </template>
 
 <script>
   export default {
   data(){
     return{
+      tabPosition: 'left'
     }
   },
     methods: {
@@ -27,46 +193,177 @@
 </script>
 
 <style scoped lang="less">
-  .arcblock-main{
-    /*padding: 10%;*/
-    width: 72%;
-    /*width: 100%;*/
-    height: 615px;
-    margin: 0 auto;
-      .main-top-left{
-        width: 50.2%;
-        height: 500px;
-        background-color: green;
-        float: left;
-          .main-title{
-            height: 101px;
-            height: 100%;
-            background-color: blue;
-            margin-top: 109px;
+  .arc-main {
+    .main-top {
+      height: 6.15rem;
+      width: 100%;
+      background-color: #f5f5f5;
+      .arcblock-main {
+        width: 13.85rem;
+        height: 6.15rem;
+        margin-left: 2.69rem;
+        .main-top-left {
+          width: 6.95rem;
+          height: 5.41rem;
+          background-color: #f5f5f5;
+          float: left;
+          .main-left-title{
+            height: 1.01rem;
+            line-height: 1.01rem;
+            font-family: "PingFangSC-Regular";
+            margin-top: 1.1rem;
+            margin-bottom: .2rem;
             img{
-              height: 101px;
-              width: 101px;
+              width: 1.01rem;
+              height: 1.01rem;
+              vertical-align: center;
               float: left;
-              margin: 0 31px;
+              margin: 0 .31rem;
             }
             .main-word{
-              clear: both;
-              display: inline-block;
-              height: 101px;
-              line-height: 101px;
-              font-size: 36px;
-              letter-spacing: 0;
-              /*margin-left: 31px;*/
+              font-size: .36rem;
+              color: #383838 ;
             }
           }
-      }
-    .main-top-right{
-      width: 49.8%;
-      height: 500px;
-      background-color: greenyellow;
-      float: left;
-    }
+          .main-left-center{
+            width: 100%;
+            border-top: 1px solid #CCCCCC;
+            height: 2.2rem;
+            p{
+              font-size: .18rem;
+              line-height: .25rem;
+              color: #383838;
+              margin-top: .42rem;
+            }
+          }
+          .main-left-img{
+            margin-top: .6rem;
+            ul{
+              display: flex;
+              justify-content: center;
+              li{
+                width: .5rem;
+                height: .5rem;
+                margin:0 .225rem;
+                a{
+                  img{
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
 
-  }
+                  }
+                }
+
+              }
+            }
+
+          }
+
+        }
+        .main-top-right {
+          width: 4rem;
+          height: 4.74rem;
+          background-color: white;
+          float: left;
+          margin-left: 2.87rem;
+          margin-top: .99rem;
+          padding: 0.15rem .3rem 0 .3rem;
+          border: 1px solid #CCCCCC;
+          border-radius: 2px;
+          .top-right-top{
+            text-align: center;
+            border-bottom: 1px solid #cccccc;
+            /*padding-top: .15rem;*/
+            /*padding: 0.15rem .36rem 0 .36rem;*/
+            h1{
+              font-size: .55rem;
+              line-height: .77rem;
+              color: #3C7BE3;
+            }
+            p{
+              font-family: PingFangSC-Medium;
+              font-size: .24rem;
+              color: #1A1A1A;
+              letter-spacing: 0;
+              line-height: .33rem;
+            }
+            div{
+              span{
+                font-family: PingFangSC-Regular;
+                font-size: .12rem;
+                color: #808080;
+                letter-spacing: 0;
+              }
+            }
+          }
+          .top-right-bottom{
+            ul{
+              padding: 0.07rem;
+              li{
+                font-size: .16rem;
+                line-height: .22rem;
+                letter-spacing: 0;
+                font-family: "PingFangSC-Medium";
+                margin: .06rem 0;
+                span{
+                  display: inline-block;
+                  float: right;
+                  color: #383838;
+                  line-height: .22rem;
+                  font-family:"PingFangSC-Regular" ;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+    .main-bottom{
+      width: 13.74rem;
+      height: 12.99rem;
+      background-color: #3c7be3;
+      /*margin-left: 2.69rem;*/
+      margin: 1.81rem 2.69rem .42rem 2.69rem;
+      /*.bottom-productions{*/
+        /*width: 2.87rem;*/
+        /*height: 5.45rem;*/
+        /*background-color: green;*/
+        /*border-right: 8px solid  #979797;*/
+        /*padding-right: .38rem;*/
+        /*float: left;*/
+        /*h1{*/
+          /*ont-family: PingFangSC-Medium;*/
+          /*font-size: .3rem;*/
+          /*color: #383838;*/
+          /*letter-spacing: 0;*/
+        /*}*/
+        /*ul{*/
+          /*margin-top: .18rem;*/
+          /*display: flex;*/
+          /*!*justify-content: center;*!*/
+          /*li{*/
+            /*font-family: PingFangSC-Medium;*/
+            /*font-size: .16rem;*/
+            /*color: #383838;*/
+            /*letter-spacing: 0;*/
+            /*cursor: pointer;*/
+            /*.pro-con{*/
+              /*width: 300px;*/
+              /*height: 300px;*/
+              /*background-color: blue;*/
+            /*}*/
+          /*}*/
+        /*}*/
+      }
+      /*.bottom-content{*/
+        /*width: 11rem;*/
+        /*height: 100%;*/
+        /*background-color: yellow;*/
+        /*float: left;*/
+      /*}*/
+    }
+  /*}*/
+
 
 </style>

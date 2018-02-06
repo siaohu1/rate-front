@@ -26,28 +26,35 @@
 
      }
     }
-
-
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .footer{
   width: 100%;
   height: 2.92rem;
   background: #3C7BE3 linear-gradient(-180deg, rgba(255,255,255,0.19) 0%, rgba(0,0,0,0.12) 95%);
   position: relative;
+  .footer-content{
+    width: 3.47rem;
+    position:absolute;
+    bottom:.93rem;
+    left:7.72rem;
+    .contact{
+      display: flex;
+      justify-content:space-around;
+    }
+    .slogan{
+      margin-top: .22rem;
+      p{
+        text-align: center;
+        font-family: "PingFangSC-Medium";
+        font-size: .16rem;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: .22rem;
+      }
+    }
+  }
 }
-.footer-content{width: 24%;position: absolute;top: .92rem;left:40%;}
-.contact{display: flex;justify-content:space-around;}
-.slogan{margin-top: .22rem;
-          p{
-            text-align: center;
-            font-family: "PingFangSC-Medium";
-            font-size: .16rem;
-            color: #FFFFFF;
-            letter-spacing: 0;
-            line-height: .22rem;
-          }
-        }
 </style>
