@@ -1,7 +1,7 @@
 <template>
     <el-row :gutter="24" class="header">
      <div class="wrapper">
-       <div class="logo"><img src="../../assets/logo.png" ></div>
+       <div class="logo"><a href="javascript:;"><img src="../../assets/logo.png" ></a></div>
        <div class="header-nav">
          <ul >
            <li><a href="javascript:;">首页</a></li>
@@ -33,12 +33,17 @@
       width:70%;
       height: 80px;
       .logo{
-        display: block;
+        float: left;
         width: .52rem;
         height: .52rem;
-        float: left;
         margin-top: .14rem;
         line-height: .8rem;
+        a{
+          img{
+              width: 100%;
+            height: 100%;
+          }
+        }
       }
       .header-nav{
         width: 80%;
