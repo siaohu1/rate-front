@@ -138,7 +138,7 @@
               </div>
             </div>
             <div class="load-more">
-              <a href="" v-for="hits in hit"></a>
+              <a href="">查看全部</a>
             </div>
           </section>
         </div>
@@ -149,7 +149,8 @@
 </template>
 
 <script>
-  import {getLists,getHits,getVotes} from "../../../api/index";
+  import {getLists} from "../../../api/index";
+  // import {getLists,getHits,getVotes} from "../../../api/index";
 
   export default {
     data() {
@@ -161,19 +162,19 @@
     },
     created() {
       this.getList();
-      this.getHit();
-      this.getVote();
+      // this.getHit();
+      // this.getVote();
     },
     methods: {
       async getList() {
         this.list = await getLists();
       },
-      async getHit() {
-        this.hit = await getHits();
-      },
-      async getVote(){
-        this.vote = await getVotes();
-      }
+      // async getHit() {
+      //   this.hit = await getHits();
+      // },
+      // async getVote(){
+      //   this.vote = await getVotes();
+      // }
     }
   }
 
@@ -191,7 +192,7 @@
       margin: .38rem 0;
       height: .64rem;
     center{
-      width: 14rem;
+      /*width: 14rem;*/
       height: 100%;
       form{
         width: 4.8rem;
@@ -224,7 +225,7 @@
   /*.sreach form img{position: absolute;width: 40px;height: 40px;top: 13px;left: 84.58%;}*/
   .content{width:100%;;margin: 0 auto;}
   .plate{width:100%;height:11rem;margin-bottom: 38px;}
-  .plate-left{width: 63%; float: left;}
+  .plate-left{width: 8.92rem; float: left;}
   .plate-left-top{width: 100%;}
   .plate-left-bottom{width:8.8766rem ;height:2.7rem;margin-top: .15rem;display: inline-block;}
   .plate-newest,.plate-hottest,.plate-vote,.plate-left-bottom{display: inline-block;border: 1px solid #ccc;border-radius: 2px;background-color: #fff;}

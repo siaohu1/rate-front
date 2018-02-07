@@ -1,13 +1,14 @@
 let express = require('express');
 let app = express();
-app.listen(8080);
+app.listen(3000);
 let fs = require('fs');
+let list = require('./list');
 let bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
 //read
 function read(cb) { //用来读取数据的
-  fs.readFile('./book.json','utf8',function (err,data) {
+  fs.readFile('./list.json','utf8',function (err,data) {
     if(err || data.length === 0){
       cb([]); // 如果有错误 或者文件没长度 就是空数组
     }else{
@@ -17,7 +18,7 @@ function read(cb) { //用来读取数据的
 }
 //write
 function write(data,cb) { // 写入内容
-  fs.writeFile('./book.json',JSON.stringify(data),cb)
+  fs.writeFile('./list.json',JSON.stringify(data),cb)
 }
 // 跨域
 app.use(function(req, res, next) {
