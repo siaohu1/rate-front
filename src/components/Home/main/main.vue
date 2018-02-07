@@ -138,7 +138,7 @@
               </div>
             </div>
             <div class="load-more">
-              <a href="">查看全部 ></a>
+              <a href="" v-for="hits in hit"></a>
             </div>
           </section>
         </div>
@@ -149,20 +149,30 @@
 </template>
 
 <script>
-  import {getLists} from "../../../api/index";
+  import {getLists,getHits,getVotes} from "../../../api/index";
 
   export default {
     data() {
       return {
         list: [],
+        hit:[],
+        vote:[],
       }
     },
     created() {
       this.getList();
+      this.getHit();
+      this.getVote();
     },
     methods: {
       async getList() {
         this.list = await getLists();
+      },
+      async getHit() {
+        this.hit = await getHits();
+      },
+      async getVote(){
+        this.vote = await getVotes();
       }
     }
   }

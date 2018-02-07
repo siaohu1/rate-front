@@ -29,6 +29,15 @@ app.use(function(req, res, next) {
   else  next();
 });
 //获取list
-app.get('/project/entrance',function (req,res) {
+app.get('/list',function (req,res) {
   res.json(list);
 });
+//获取hit
+// app.get('/project/updateClick',function (req,res) {
+//   res.json(hit);
+// });
+// //获取vote
+// app.get('/projectPoll/updatePollByid',function (req,res) {
+//   res.json(vote);
+// });
+
