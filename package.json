@@ -14,19 +14,21 @@
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
-    "body-parser": "^1.18.2",
     "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "element-ui": "^2.0.11",
     "express": "^4.16.2",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
-    "element-ui": "^2.0.11",
     "lib-flexible": "^0.3.2",
     "px2rem-loader": "^0.1.7",
-    "vue-lazyload": "^1.1.4",
-    "vue": "^2.5.2",
+    "vue": "^2.5.13",
     "vue-awesome-swiper": "^3.1.2",
+    "vue-lazyload": "^1.1.4",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "wilddog": "^2.5.17",
+    "wildvue": "^1.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

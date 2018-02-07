@@ -10,6 +10,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 
+// import WildVue from 'wildvue'
+// import wilddog from 'wilddog'
+// // 在模块化环境中需要使用 user 安装
+// Vue.use(WildVue)
 
 Vue.config.productionTip = false
 
