@@ -1,5 +1,5 @@
 <template>
-    <el-row :gutter="24" >
+    <el-row :gutter="24">
       <div class="footer">
         <div class="footer-content">
           <div class="contact">

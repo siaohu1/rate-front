@@ -48,8 +48,8 @@
     <el-col class="main-top-right">
       <div class="top-right-top">
         <h1>9.0</h1>
-        <p><img src="../../../assets/time.png" alt="">还剩15小时3分</p>
-        <div><span>2018-01-15</span>-<span>2018-02-15</span></div>
+        <p><img src="../../../assets/icon/时间1.png" alt="">还剩15小时3分</p>
+        <div><span>2018-01-15 </span>-<span> 2018-02-15</span></div>
       </div>
       <div class="top-right-bottom">
         <ul>
@@ -73,8 +73,14 @@
       <div class="bottom-productions">
         <h1>章节</h1>
         <ul>
-         <li @click="n=1">评级最小的投资</li>
-         <li @click="n=2">评级最小的投资</li>
+         <li @click="n=1">评级最小的投资评级最小的投资评</li>
+         <li @click="n=2">评级最小的投资评级最小的</li>
+         <li @click="n=3">评级最小的投资小的投资</li>
+         <li @click="n=3">评级最小的投资评级最小的投资评级最小的投资</li>
+         <li @click="n=3">评级最小小的投资</li>
+         <li @click="n=3">评级最小的投资评</li>
+         <li @click="n=3">评级最小的投资评级最小的投资评级最小的投资</li>
+         <li @click="n=3">评级资</li>
          <li @click="n=3">评级最小的投资</li>
 
         </ul>
@@ -244,11 +250,25 @@
             p{
               font-family: PingFangSC-Medium;
               font-size: .24rem;
-              color: #1A1A1A;
+              color: #383838;
               letter-spacing: 0;
               line-height: .33rem;
+              margin-bottom: .03rem;
+              /*height: .33rem;*/
+              img{
+                vertical-align: top;
+                margin-right: .04rem;
+                width: .28rem;
+                height: .28rem;
+                position: relative;
+                top: .02rem;
+
+              }
             }
             div{
+              color: #808080;
+              line-height: .24rem;
+              margin-bottom: .01rem;
               span{
                 font-family: PingFangSC-Regular;
                 font-size: .12rem;
@@ -298,9 +318,11 @@
           font-size: .3rem;
           color: #383838;
           letter-spacing: 0;
+          margin-top: .05rem;
         }
         ul{
-          margin-top: .18rem;
+          margin-top: .32rem;
+          padding-right: .38rem;
           li{
             font-family: PingFangSC-Medium;
             font-size: .16rem;
@@ -323,7 +345,7 @@
           font-size: .36rem;
           color: #383838;
           letter-spacing: 0;
-          margin-top: .1rem;
+          /*margin-top: .1rem;*/
         }
         p{
           ont-family: PingFangSC-Regular;

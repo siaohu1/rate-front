@@ -16,7 +16,7 @@
               <div class="plate-newest-list">
                 <section class="plate-box">
                   <header class="plate-header">
-                    <span>最新项目</span>
+                    <span>最热项目</span>
                     <span>项目评级</span>
                   </header>
                   <div class="plate-content">
@@ -25,7 +25,7 @@
                         <div class="items">
                           <div class="items-name">
                             <div class="items-left" style="white-space:nowrap;">
-                              <img src="list.findProjectByClick.picurl" alt="">
+                              <img src="../../../assets/zhanwei.png" alt="">
                               <a href="#">{{list.findProjectByClick.name}}</a>
                             </div>
                             <div>
@@ -41,8 +41,8 @@
                               <el-button type="info" size="mini">真领头</el-button>
                               <el-button type="info" size="mini">真格领头</el-button>
                             </div>
-                            <div>
-                              <p><img src="../../../assets/eys.png" alt=""><span>{{list.findProjectByClick.click}}</span></p>
+                            <div class="home-click">
+                              <p><img src="../../../assets/eys.png" alt="" class="home-eye"><span>{{list.findProjectByClick.click}}</span></p>
                             </div>
                           </div>
                         </div>
@@ -60,7 +60,7 @@
               <div class="plate-hottest-list">
                 <section class="plate-box">
                   <header class="plate-header">
-                    <span>最热项目</span>
+                    <span>最新项目</span>
                     <span>项目评级</span>
                   </header>
                   <div class="plate-content">
@@ -68,7 +68,7 @@
                       <div class="items">
                         <div class="items-name">
                           <div class="items-left" style="white-space:nowrap;">
-                            <img src="../../../assets/eys.png" alt="">
+                            <img src="../../../assets/zhanwei.png" alt="">
                             <a href="#">{{list.projectByTimeDescList.name}}</a>
                           </div>
                           <div>
@@ -84,8 +84,8 @@
                             <el-button type="info" size="mini">真领头</el-button>
                             <el-button type="info" size="mini">真格领头</el-button>
                           </div>
-                          <div>
-                            <p><img src="../../../assets/eys.png" alt=""><span>{{list.projectByTimeDescList.click}}</span></p>
+                          <div class="home-click">
+                            <p><img src="../../../assets/eys.png" alt="" class="home-eye"><span>{{list.projectByTimeDescList.click}}</span></p>
                           </div>
                         </div>
                       </div>
@@ -102,10 +102,10 @@
           <div class="plate-left-bottom">
             <div class="newsimg"><img src="../../../assets/img1.png" alt=""></div>
             <div class="news">
-              <h5>独家：从ICORating获得Telegram Open Network白皮书的入门书</h5>
+              <h5>独家：从ICORating获得Telegram Open白皮书的入门书</h5>
               <p class="reportTime"><img src="../../../assets/time.png" alt=""><span>2018年3月21日</span></p>
               <p class="reportText">ICORating团队已经获得了即将到来的电报开放网络（Telegram Open Network）ICO白皮书的入门书 -
-                这是一个在炒作和投资方面已被宣布破纪录的加密行动。</p>
+                这是一个在炒作和投资方面已被宣布破纪录的加密的行动。</p>
             </div>
           </div>
 
@@ -115,7 +115,7 @@
           <section class="plate-box">
             <header class="plate-header">
               <span>项目投票</span>
-              <span>投票数</span>
+              <span style="margin-right: .18rem">投票数</span>
             </header>
             <div class="plate-content">
               <div class="items-list" v-for="lists in list">
@@ -123,14 +123,14 @@
                   <div class="items-name">
                     <div class="items-left">
                       <ul>
-                        <li><img src="../../../assets/eys.png" alt=""></li>
+                        <li><img src="../../../assets/zhanwei.png" alt=""></li>
                         <li class="voteNum">
                           <a href="#">{{list.projectByTimeDescList.name}}</a><br>
                           <img src="../../../assets/vote.png" alt=""><span>{{list.projectByTimeDescList.click}}</span>
                         </li>
                       </ul>
                     </div>
-                    <div>
+                    <div style="margin-right: .2rem">
                       <el-button class="votebtn" type="primary" size="small">点击投票</el-button>
                     </div>
                   </div>
@@ -162,6 +162,7 @@
     },
     created() {
       this.getList();
+      console.log(this);
       // this.getHit();
       // this.getVote();
     },
@@ -200,10 +201,10 @@
         position: relative;
         img{
           position: absolute;
-          width: .4rem;
-          height: .4rem;
-          top: .13rem;
-          right: 0rem;
+          width: .3rem;
+          height: .3rem;
+          top: .17rem;
+          right: 0;
         }
         input{
           width:100%;
@@ -240,20 +241,22 @@
     vertical-align: top;
     margin-right: .05rem;
   }
-  .news{
+  .home-click{
+    margin-top: .41rem;
   }
   .plate-newest,.plate-hottest{width:4.337rem;height: 10.99rem;position: relative;overflow: hidden;}
   .plate-vote{position: relative;overflow: hidden;}
   .plate-vote{width: 4.68rem;height: 13.9rem;margin-left:.17rem;float: left;}
   .plate-box{width: 91.97%;margin: 0 auto;margin-top: 30px;}
-  .plate-header{font-size: .2rem;color: #808080;display: flex;justify-content: space-between;border-bottom: 1px solid #ccc;}
+  .plate-header{font-size: .2rem;color: #808080;display: flex;justify-content: space-between;border-bottom: 1px solid #ccc;padding:0 .1rem 0 .18rem}
   .plate-header span{padding-bottom: .12rem;}
   .items{width: 100%;height: 1.90rem;margin: 0 auto;margin-top: .26rem;margin-bottom: .26rem;border-bottom: 1px solid #ccc;}
-  .items-name{display: flex;justify-content: space-between;}
-  .items-name img{width:.64rem;height: .64rem;float: left;}
+  .items-name{display: flex;justify-content: space-between;
+    padding-left: .26rem}
+  .items-name img{width:.64rem;height: .64rem;float: left;margin-right: .1rem}
   .items-name a{color:#383838;font-size: .24rem;line-height:.64rem;font-weight: bolder;}
-  .items-name p{font-size: .42rem;color:#3C7BE3;}
-  .items-label{display: flex;justify-content: space-between;margin-top: 19px;}
+  .items-name p{font-size: .42rem;color:#3C7BE3;padding-right: .20rem}
+  .items-label{display: flex;justify-content: space-between;margin-top: 19px;margin-right: .26rem}
   .item1{width: 100%;height: 1.14rem;margin: 0 auto;margin-top: .26rem;margin-bottom: .26rem;border-bottom: 1px solid #ccc;}
   .item1-label p span{font-size: .12rem;color: #808080;}
   .item1-label p{float: right;margin-top: 90%;}
@@ -283,25 +286,28 @@
     }
   }
   .tab span{
-    font-size: .12rem;
+    font-size: .01rem;
+  }
+  .home-eye{
+    position: relative;top: .024rem;right: .03rem;
   }
   .danger{background-color: #F86A6A ;}
   .primary{background-color: #3C7BE3  ;}
   .info{background-color: #cccccc  ;}
-  .tab{display: flex;flex-wrap:wrap;align-content: space-between;height: .63rem;overflow: hidden; width: 2.4rem}
+  .tab{display: flex;flex-wrap:wrap;align-content: space-between;height: .63rem;overflow: hidden; width: 2.4rem;padding-left: .26rem}
   ul li {display: inline-block;}
   .voteNum a{color: #383838;font-size: .24rem;font-weight: bolder;}
   .voteNum img{width: .2rem ;height: .2rem;}
-  .voteNum span{font-size: .2rem;color: #808080;line-height:.2rem;}
+  .voteNum span{font-size: .2rem;color: #808080;line-height:.2rem;position: relative;right: .08rem}
   .votebtn{margin-top: 50%;}
   .newsimg{width: 3.32rem;height:2.7rem;display: inline-block;float: left;background:url(../../../assets/img1.png) no-repeat;background-size:cover;}
-  .news{width: 5rem;height: 1.6rem;display: inline-block; float: left;margin-left: .3rem;margin-top: .56rem;padding-right: .2rem}
+  .news{width: 5rem;height: 1.6rem;display: inline-block; float: left;margin-left: .33rem;margin-top: .56rem;padding-right: .2rem}
   h5{font-size: .24rem;font-weight: normal;text-align: left;}
   .news p{text-align: left;font-size: .14rem;color: #383838;line-height: .21rem;span{
     margin-bottom: .21rem;
   }}
   .reportText{
-    padding-right: .3rem;
+    /*padding-right: .3rem;*/
   }
   /*.reportText{margin-top: 15px;}*/
   .checkall{z-index:999;width: 100%;height:.3rem;position: absolute;bottom: 0px;margin-top: .10rem;background-color:#fff;}
@@ -309,17 +315,27 @@
   .checkall a{color: #3c7be3;font-size: .16rem;}
   /* 滚动条样式 */
   .plate-newest{overflow: auto;float: left}
-  ::-webkit-scrollbar{width: .1rem;height: .1rem!important;}
-  ::-webkit-scrollbar-track{border-radius: 5px;background: #fff;}
-  ::-webkit-scrollbar-thumb {width: .1rem;height: .3rem}
+  /*::-webkit-scrollbar{width: .1rem;}*/
+  /*::-webkit-scrollbar-track{border-radius: 5px;height: 0.3rem;background: #fff}*/
+  /*::-webkit-scrollbar-thumb {width: .15rem;height: .3rem;background: rgba(0,0,0,0.2)}*/
   .plate-vote-list{overflow: auto;}
   .plate-hottest{overflow:auto; float: left;margin-left: .15rem}
-
-  /*.plate-hottest-list::-webkit-scrollbar{width: 10px;height: 189px;}*/
-  /*.plate-hottest-list::-webkit-scrollbar-track{border-radius: 10px;background: #cccccc;}.plate-newest-list{overflow-y: scroll;}*/
+  /*.plate-newest::-webkit-scrollbar-track {!*滚动条里面轨道*!*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+    /*border-radius: 10px;*/
+    /*background: #EDEDED;*/
+  /*}*/
+  /*.plate-newest::-webkit-scrollbar-thumb {!*滚动条里面小方块*!*/
+    /*border-radius: 10px;*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(200,200,200,0.2);*/
+    /*background: black;*/
+  /*}*/
+  /*::-webkit-scrollbar{width: 10px;height: 189px;}*/
+   /*::-webkit-scrollbar-track{border-radius: 10px;background: #cccccc;}.plate-newest-list{overflow-y: scroll;}*/
 
   /*.plate-vote-list::-webkit-scrollbar{width: 10px;height: 189px;}*/
   /*.plate-vote-list::-webkit-scrollbar-track{border-radius: 10px;background: #cccccc;}*/
+
   .plate-content{overflow: visible!important;}
   .el-button+.el-button{
     margin: 0 .1rem 0 0;
@@ -339,9 +355,13 @@
     display: inline-block;
     height: .22rem;
   }
-  .el-button-mini{
+  .el-button--mini{
     padding: 0!important;
+    font-size: .01rem;
+    font-weight: 200;
+    font-family: "PingFangSC-Medium";
   }
+
 
 
 </style>

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import lheader from '../../baseComponents/header/header'
+  import lheader from '../../baseComponents/abrock-header/header'
   import lmain from './arcblock-main/arcblock-main'
   import lfooter from '../../baseComponents/footer/footer'
   export default {

@@ -9,7 +9,7 @@ module.exports = {
     // proxy
     proxyTable: {
       '/api': {
-        target: 'http://result.eolinker.com/44a5qEx9dbc59b403308b7e341344fad94a21dd373fa8bf?uri=',
+        target: 'http://localhost:8000',
         // target: 'http://localhost:8000/',
         //设置你调用的接口域名和端口号 别忘了加http
         secure: true,  // 如果是https接口，需要配置这个参数

@@ -1,14 +1,14 @@
 <template>
       <el-row :gutter="24" class="banner">
           <swiper :options="swiperOption" class="swiperbox" style="overflow:hidden;">
-          <swiper-slide><img src="../../../assets/banner01.png" alt=""></swiper-slide>
-          <swiper-slide><img src="../../../assets/banner01.png" alt=""></swiper-slide>
-          <swiper-slide><img src="../../../assets/banner01.png" alt=""></swiper-slide>
+          <swiper-slide><img src="../../../assets/banner.jpg" alt="" style="width: 100%"></swiper-slide>
+          <swiper-slide><img src="../../../assets/banner.jpg" alt="" style="width: 100%"></swiper-slide>
+          <swiper-slide><img src="../../../assets/banner.jpg" alt="" style="width: 100%"></swiper-slide>
           <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
       <div class="swiper-text">
-          <p>如果你无法简洁的表达你的想法，那只说明你还不够了解它.</p>
-          <span>-- 阿尔伯特·爱因斯坦</span>
+          <!--<p>如果你无法简洁的表达你的想法，那只说明你还不够了解它.</p>-->
+          <!--<span>&#45;&#45; 阿尔伯特·爱因斯坦</span>-->
       </div>
       </el-row>
 </template>
@@ -56,7 +56,7 @@
 <style  lang="less">
   .banner{
     height: 5.32rem;
-    opacity: 0.5;
+    opacity: 0.9;
     /*background-image: linear-gradient(-242deg, rgba(5,90,229,0.02) 6%, #320773 63%);*/
     position: relative;
     .swiper-pagination{

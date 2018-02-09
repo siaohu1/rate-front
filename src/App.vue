@@ -3,7 +3,6 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
   export default {
     name: 'App',
@@ -189,11 +188,27 @@
     content: "";
     clear: both
   }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
+  /*::-webkit-scrollbar {!*滚动条整体样式*!*/
+    /*width: .1rem;     !*高宽分别对应横竖滚动条的尺寸*!*/
+  /*}*/
+  /*::-webkit-scrollbar-thumb {*/
+    /*border-radius: 5px;*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
+    /*background: rgba(0, 0, 0, .5);*/
+  /*}*/
+  /*::-webkit-scrollbar-track {!*滚动条里面轨道*!*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0);*/
+    /*border-radius: 10px;*/
+    /*!*background: #EDEDED;*!*/
+  /*}*/
+  ::-webkit-scrollbar{width:.1rem;}
+  ::-webkit-scrollbar-track{background-color:white;}
+  ::-webkit-scrollbar-thumb{
+    background-color:#ccc;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 10px rgba(255,255,255,1);
   }
+  /*::-webkit-scrollbar-thumb:hover {background-color:#9c3}*/
+  /*::-webkit-scrollbar-thumb:active {background-color:#00aff0}*/
 
 </style>
