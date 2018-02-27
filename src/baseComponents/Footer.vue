@@ -1,33 +1,23 @@
 <template>
     <el-row :gutter="24">
-      <div class="footer">
-        <div class="footer-content">
-          <div class="contact">
-              <a href=""><img src="../../assets/facebook-f.png" alt=""></a>
-              <a href=""><img src="../../assets/in.png" alt=""></a>
-              <a href=""><img src="../../assets/plan.png" alt=""></a>
-              <a href=""><img src="../../assets/wecat.png" alt=""></a>
-              <a href=""><img src="../../assets/weibo.png" alt=""></a>
-              <a href=""><img src="../../assets/email.png" alt=""></a>
-          </div>
-          <div class="slogan">
+      <footer class="footer">
+        <section class="footer-content">
+          <section class="contact">
+              <a href=""><img src="../assets/facebook-f.png" alt=""></a>
+              <a href=""><img src="../assets/in.png" alt=""></a>
+              <a href=""><img src="../assets/plan.png" alt=""></a>
+              <a href=""><img src="../assets/wecat.png" alt=""></a>
+              <a href=""><img src="../assets/weibo.png" alt=""></a>
+              <a href=""><img src="../assets/email.png" alt=""></a>
+          </section>
+          <article class="slogan">
             <p>B20是由投资者和金融专家支持的ICO评级平台。</p>
             <p>&copy;2017-2018保留所有权利</p>
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </footer>
     </el-row>
 </template>
-
-<script>
-  export default {
-    data (){
-     return {
-
-     }
-    }
-  }
-</script>
 
 <style lang="less" scoped>
 .footer{

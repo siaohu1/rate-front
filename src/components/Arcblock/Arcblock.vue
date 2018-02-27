@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <section>
 <lheader/>
     <lmain/>
     <lfooter/>
-  </div>
+  </section>
 </template>
 
 <script>
-  import lheader from '../../baseComponents/abrock-header/header'
-  import lmain from './arcblock-main/arcblock-main'
-  import lfooter from '../../baseComponents/footer/footer'
+  import lheader from '../../baseComponents/AbrockHeader'
+  import lmain from './ArcblockMain'
+  import lfooter from '../../baseComponents/Footer'
   export default {
     components:{
       lheader,

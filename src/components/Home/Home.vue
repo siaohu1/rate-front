@@ -1,20 +1,19 @@
 <template>
-  <div>
+  <section>
     <lheader></lheader>
     <banner></banner>
     <lmain></lmain>
     <lfooter></lfooter>
-  </div>
+  </section>
 </template>
 <script>
-  import lheader from '../../baseComponents/header/header'
-  import banner from './banner/banner'
-  import lmain from './main/main'
-  import lfooter from '../../baseComponents/footer/footer'
+  import lheader from '../../baseComponents/Header'
+  import banner from './Banner'
+  import lmain from './HomeMain'
+  import lfooter from '../../baseComponents/Footer'
   export default {
     data() {
       return {
-
       }
     },
     methods: {},

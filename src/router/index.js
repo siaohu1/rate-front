@@ -17,9 +17,9 @@ export default new Router({
       path:'/arcblock',
       component:()=>import('../components/Arcblock/Arcblock.vue') ,
     },
-    // {
-    //   path:'*',
-    //   redirect:'/home'
-    // },
+    {
+      path:'*',
+      redirect:'/home'
+    },
   ]
 })
