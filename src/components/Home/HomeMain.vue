@@ -19,17 +19,17 @@
                     <span>最热项目</span>
                     <span>项目评级</span>
                   </header>
-                  <section class="plate-content">
+                  <section class="plate-content" v-for="(list,index) in HottestList" @click="clickView(list.id)">
                     <router-link to="/arcblock">
-                      <section class="items-list" v-for="lists in list">
+                      <section class="items-list">
                         <section class="items">
                           <section class="items-name">
                             <article class="items-left" style="white-space:nowrap;">
-                              <img src="../../assets/zhanwei.png" alt="">
-                              <a href="#">{{list.findProjectByClick.name}}</a>
+                              <img  src="list.logo" alt="">
+                              <a href="#">{{list.name}}</a>
                             </article>
                             <section>
-                              <p>{{list.findProjectByClick.core}}</p>
+                              <p>{{list.grade}}</p>
                             </section>
                           </section>
                           <section class="items-label">
@@ -42,7 +42,7 @@
                               <el-button type="info" size="mini">真格领头</el-button>
                             </section>
                             <article class="home-click">
-                              <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.findProjectByClick.click}}</span></p>
+                              <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.voteCount}}</span></p>
                             </article>
                           </section>
                         </section>
@@ -62,16 +62,16 @@
                     <span>最新项目</span>
                     <span>项目评级</span>
                   </header>
-                  <section class="plate-content">
-                    <section class="items-list" v-for="lists in list">
+                  <section class="plate-content" v-for="(list,index) in LatestList">
+                    <section class="items-list">
                       <section class="items">
                         <section class="items-name">
                           <article class="items-left" style="white-space:nowrap;">
-                            <img src="../../assets/zhanwei.png" alt="">
-                            <a href="#">{{list.projectByTimeDescList.name}}</a>
+                            <img src="list.logo" alt="">
+                            <a href="#">{{list.name}}</a>
                           </article>
                           <section>
-                            <p>{{list.projectByTimeDescList.core}}</p>
+                            <p>{{list.grade}}</p>
                           </section>
                         </section>
                         <section class="items-label">
@@ -84,7 +84,7 @@
                             <el-button type="info" size="mini">真格领头</el-button>
                           </section>
                           <article class="home-click">
-                            <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.projectByTimeDescList.click}}</span></p>
+                            <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.voteCount}}</span></p>
                           </article>
                         </section>
                       </section>
@@ -113,21 +113,21 @@
               <span>项目投票</span>
               <span style="margin-right: .18rem">投票数</span>
             </header>
-            <section class="plate-content">
-              <section class="items-list" v-for="lists in list">
+            <section class="plate-content" v-for="(list,index) in VotingList">
+              <section class="items-list">
                 <section class="item1">
                   <section class="items-name">
                     <section class="items-left">
                       <ul>
-                        <li><img src="../../assets/zhanwei.png" alt=""></li>
+                        <li><img :src="list.icon" alt=""></li>
                         <li class="voteNum">
-                          <a href="#">{{list.projectByTimeDescList.name}}</a><br>
-                          <img src="../../assets/vote.png" alt=""><span>{{list.projectByTimeDescList.click}}</span>
+                          <a href="#">{{list.name}}</a><br>
+                          <img src="../../assets/vote.png" alt=""><span>{{list.voteCount}}1</span>
                         </li>
                       </ul>
                     </section>
                     <section style="margin-right: .2rem">
-                      <el-button class="votebtn" type="primary" size="small">点击投票</el-button>
+                      <el-button class="votebtn" type="primary" size="small" @click="clickVote(list.id)">点击投票</el-button>
                     </section>
                   </section>
                 </section>
@@ -145,25 +145,93 @@
 </template>
 
 <script>
-  import {getLists} from "../../api/index";
+  import * as apiRequest from '../../api/api'
   export default {
     data() {
       return {
-        list: [],
+        //最新
+        HottestList: [],
+        HottestCount: 0,
+        //最热
+        LatestList:[],
+        LatestCount:0,
+        //投票
+        VotingList:[],
+        VotingCount:0,
+        projectId:'',
       }
     },
-    created() {
-      this.getList();
-      console.log(this);
+    mounted() {
+      this.getRateList();
     },
     methods: {
-      async getList() {
-        this.list = await getLists();
+      //获取评级列表
+      getRateList(pageIndex = 1,) {
+        var _this = this
+        apiRequest.rateList({
+          pageIndex,
+          pageSize: 20,
+          type :0,
+        })
+          .then(data => {
+            _this.HottestList = data.project_list
+            _this.HottestCount = data.count
+          })
+          .catch(error => {
+            console.log(error)
+          });
+        apiRequest.rateList({
+          pageIndex,
+          pageSize: 20,
+          type :1,
+        })
+          .then(data => {
+            _this.LatestList = data.project_list
+            _this.LatestCount = data.count
+          })
+          .catch(error => {
+            console.log(error)
+          });
+        apiRequest.rateList({
+          pageIndex,
+          pageSize: 20,
+          type :2,
+        })
+          .then(data => {
+            _this.VotingList = data.project_list
+            _this.VotingCount = data.count
+          })
+          .catch(error => {
+            console.log(error)
+          });
       },
+      //点击投票
+      clickVote(projectId){
+        apiRequest.voteProject({
+          projectId
+        }).then(data => {
+          alert('投票成功');
+          this.getRateList();
+        })
+          .catch(error => {
+            console.log(error)
+          })
+      },
+      //点击记录浏览量
+      clickView(projectId){
+        apiRequest.viewClick({
+          projectId
+        }).then(data => {
+          // alert('投票成功');
+          this.getRateList();
+        })
+          .catch(error => {
+            console.log(error)
+          })
+      }
     }
   }
 </script>
-
 
 <style scoped lang="less">
   .main{
@@ -198,7 +266,7 @@
         }
       }
     }
-    };
+    }
     .content{
       width: 100%;
       margin: 0 auto;
@@ -221,7 +289,15 @@
         }
       }
     }
-    .plate-newest,.plate-hottest,.plate-vote,.plate-left-bottom{display: inline-block;border: 1px solid #ccc;border-radius: 2px;background-color: #fff;}
+    .plate-newest,
+    .plate-hottest,
+    .plate-vote,
+    .plate-left-bottom{
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      background-color: #fff;
+    }
     .newsimg img{
       width: 100%;
       height: 100%;
@@ -236,7 +312,13 @@
     .home-click{
       margin-top: .41rem;
     }
-    .plate-newest,.plate-hottest{width:4.337rem;height: 10.99rem;position: relative;overflow: hidden;}
+    .plate-newest,
+    .plate-hottest{
+      width:4.342rem;
+      height: 10.99rem;
+      position: relative;
+      overflow: hidden;
+    }
     .plate-vote{
       position: relative;
       overflow: hidden;
@@ -245,7 +327,11 @@
       margin-left:.17rem;
       float: left;
     }
-    .plate-box{width: 91.97%;margin: 0 auto;margin-top: 30px;}
+    .plate-box{
+      width: 91.97%;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
     .plate-header{
       font-size: .2rem;
       color: #808080;
@@ -259,8 +345,8 @@
     }
     .items{
       width: 100%;
-      height: 1.90rem;
-      margin: .26rem auto;
+      height: 1.750rem;
+      margin-top: .26rem;
       border-bottom: 1px solid #ccc;
     }
     .items-name{
@@ -285,15 +371,19 @@
         padding-right: .20rem;
       }
     }
-    .item1{width: 100%;height: 1.14rem;margin: .26rem auto;border-bottom: 1px solid #ccc;}
+    .item1{width: 100%;
+      height: 1.14rem;
+      margin: .26rem auto;
+      border-bottom: 1px solid #ccc;
+    }
     .items-label{
       display: flex;
       justify-content: space-between;
-      margin-top: 19px;
+      margin-top: .19rem;
       margin-right: .26rem;
       p{
         float: right;
-        margin-top: 90%;
+        margin-top:  .065rem;
         span{
           font-size: .12rem;
           color: #808080;
@@ -340,7 +430,10 @@
       padding: 0;
     }
     .tab .el-button{
-      width: .64rem;height: .21rem;border-radius: .04rem;;color: #fff;
+      width: .64rem;
+      height: .21rem;
+      border-radius: .04rem;
+      color: #fff;
       padding: .03rem .05rem;
       span{
         font-size: .12rem;
@@ -350,12 +443,28 @@
       font-size: .01rem;
     }
     .home-eye{
-      position: relative;top: .024rem;right: .03rem;
+      position: relative;
+      top: .024rem;
+      right: .03rem;
     }
-    .danger{background-color: #F86A6A ;}
-    .primary{background-color: #3C7BE3  ;}
-    .info{background-color: #cccccc  ;}
-    .tab{display: flex;flex-wrap:wrap;align-content: space-between;height: .63rem;overflow: hidden; width: 2.4rem;padding-left: .26rem}
+    .danger{
+      background-color: #F86A6A;
+    }
+    .primary{
+      background-color: #3C7BE3;
+    }
+    .info{
+      background-color: #cccccc;
+    }
+    .tab{
+      display: flex;
+      flex-wrap:wrap;
+      align-content: space-between;
+      height: .63rem;
+      overflow: hidden;
+      width: 2.4rem;
+      padding-left: .26rem;
+    }
     ul li {display: inline-block;}
     .voteNum{
       a{
@@ -375,8 +484,17 @@
         right: .08rem;
       }
     }
-    .votebtn{margin-top: 50%;}
-    .newsimg{width: 3.32rem;height:2.7rem;display: inline-block;float: left;background:url(../../assets/img1.png) no-repeat;background-size:cover;}
+    .votebtn{
+      margin-top: 50%;
+    }
+    .newsimg{
+      width: 3.32rem;
+      height:2.7rem;
+      display: inline-block;
+      float: left;
+      background:url(../../assets/img1.png) no-repeat;
+      background-size:cover;
+    }
     .news{
       width: 5rem;
       height: 1.6rem;
@@ -394,8 +512,11 @@
           margin-bottom: .21rem;
         }
       }
+      h5{font-size: .24rem;
+        font-weight: normal;
+        text-align: left;
+      }
     }
-    h5{font-size: .24rem;font-weight: normal;text-align: left;}
     .checkall{
       z-index:999;
       width: 100%;
@@ -414,15 +535,26 @@
       }
     }
     /* 滚动条样式 */
-    .plate-newest{overflow: auto;float: left}
-    .plate-vote-list{overflow: auto;}
-    .plate-hottest{overflow:auto; float: left;margin-left: .15rem}
-    .plate-content{overflow: visible!important;}
+    .plate-newest{
+      overflow: auto;
+      float: left;
+    }
+    .plate-vote-list{
+      overflow: auto;
+    }
+    .plate-hottest{
+      overflow:auto;
+      float: left;
+      margin-left: .16rem;
+    }
+    .plate-content{
+      overflow: visible!important;
+    }
     .el-button+.el-button{
-      margin: 0 .1rem 0 0;
+      margin: 0 .14rem 0 0;
     }
     .el-button--primary{
-      margin-right: .1rem;
+      margin-right: .14rem;
     }
     .load-more{
       text-align: center;
@@ -434,6 +566,7 @@
         font-family: "PingFangSC-Regular";
         display: inline-block;
         height: .22rem;
+        margin-top: .175rem;
       }
     }
     .el-button--mini{
@@ -443,6 +576,4 @@
       font-family: "PingFangSC-Medium";
     }
     }
-
-
 </style>

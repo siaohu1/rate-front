@@ -1,5 +1,5 @@
-// import * as Types from './mutations-type';
-// const mutations = {
+import * as Types from './mutations-type';
+const mutations = {
 //   [Types.ADD_CART](state,book){
 //     // book是添加的一本书，如果有这本书 累加的是数量，如果没有数量为1 放到cartList中
 //     let product = state.cartList.find(item=>item.bookId===book.bookId);
@@ -12,5 +12,5 @@
 //       state.cartList = [...state.cartList,book]
 //     }
 //   }
-// };
-// export default mutations;
+};
+export default mutations;
