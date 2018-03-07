@@ -20,7 +20,7 @@
                     <span>项目评级</span>
                   </header>
                   <section class="plate-content" v-for="(list,index) in HottestList" @click="clickView(list.id)">
-                    <router-link to="/arcblock">
+                    <router-link :to="`/arcblock?id=${list.id}`">
                       <section class="items-list">
                         <section class="items">
                           <section class="items-name">
@@ -63,7 +63,7 @@
                     <span>项目评级</span>
                   </header>
                   <section class="plate-content" v-for="(list,index) in LatestList">
-                    <router-link to="/arcblock">
+                    <router-link :to="`/arcblock?id=${list.id}`">
                     <section class="items-list">
                       <section class="items">
                         <section class="items-name">
