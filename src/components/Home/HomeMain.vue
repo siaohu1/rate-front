@@ -1,13 +1,13 @@
 <template xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <el-row :gutter="24" class="main">
     <section class="sreach">
-      <center>
-        <form action="">
-          <input type="text" placeholder="搜索项目">
-          <img src="../../assets/search.png" alt="">
-        </form>
-      </center>
-      </section>
+      <!--<center>-->
+        <!--<form action="">-->
+          <!--<input type="text" placeholder="搜索项目">-->
+          <!--<img src="../../assets/search.png" alt="">-->
+        <!--</form>-->
+      <!--</center>-->
+    </section>
     <section class="content">
       <section class="plate">
         <section class="plate-left">
@@ -116,16 +116,16 @@
               <span style="margin-right: .18rem">投票数</span>
             </header>
             <section class="plate-content" v-for="(list,index) in VotingList">
-              <router-link to="/arcblock">
+              <!--<router-link to="/arcblock">-->
               <section class="items-list">
                 <section class="item1">
                   <section class="items-name">
                     <section class="items-left">
                       <ul>
-                        <li><img :src="list.icon" alt=""></li>
+                        <li><img src="list.icon" alt=""></li>
                         <li class="voteNum">
                           <a href="#">{{list.name}}</a><br>
-                          <img src="../../assets/vote.png" alt=""><span>{{list.voteCount}}1</span>
+                          <img src="../../assets/vote.png" alt=""><span>{{list.voteCount}}</span>
                         </li>
                       </ul>
                     </section>
@@ -135,7 +135,7 @@
                   </section>
                 </section>
               </section>
-              </router-link>
+              <!--</router-link>-->
             </section>
             <section class="load-more">
               <a href="">查看全部</a>
@@ -232,7 +232,8 @@
           .catch(error => {
             console.log(error)
           })
-      }
+      },
+      //搜索(未实现)
     }
   }
 </script>
