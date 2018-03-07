@@ -63,6 +63,7 @@
                     <span>项目评级</span>
                   </header>
                   <section class="plate-content" v-for="(list,index) in LatestList">
+                    <router-link to="/arcblock">
                     <section class="items-list">
                       <section class="items">
                         <section class="items-name">
@@ -89,6 +90,7 @@
                         </section>
                       </section>
                     </section>
+                    </router-link>
                   </section>
                 </section>
               </section>
@@ -114,6 +116,7 @@
               <span style="margin-right: .18rem">投票数</span>
             </header>
             <section class="plate-content" v-for="(list,index) in VotingList">
+              <router-link to="/arcblock">
               <section class="items-list">
                 <section class="item1">
                   <section class="items-name">
@@ -132,6 +135,7 @@
                   </section>
                 </section>
               </section>
+              </router-link>
             </section>
             <section class="load-more">
               <a href="">查看全部</a>
