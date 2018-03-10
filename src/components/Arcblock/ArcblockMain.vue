@@ -1,14 +1,14 @@
 <template>
   <section class="arc-main">
   <section class="main-top">
-  <section class="arcblock-main" v-for="list in projectDetailList">
+  <section class="arcblock-main">
   <section class="main-top-left">
       <el-col class="main-left-title">
-        <img src="../../assets/banner01.png" alt="">
-        <span class="main-word">{{list.projectName}}</span>
+        <img :src="projectDetailList.logo" alt="">
+        <span class="main-word">{{projectDetailList.projectName}}</span>
       </el-col>
       <el-col class="main-left-center">
-      <p >就像Facebook连接好友和LinkedIn连接专业人士一样，目前的TraDove平台将业务合作伙伴与其业务社交网络连接起来。下一代平台将利用区块链和人工智能驱动的社交网络技术，进一步缩短企业买方和卖方的发现周期，提高B2B透明度，扩大用户信任，并允许公司到公司之间的精准广告。此外，BBCoin将为国际贸易提供更好的支付工具。我们已经经营了5年，现在在全球有25万个企业用户。我们很荣幸地宣布TraDove已经筹集了400万美元的股权投资。</p>
+      <p >{{projectDetailList.projectDesc}}</p>
       </el-col>
       <el-col class="main-left-img">
         <ul>

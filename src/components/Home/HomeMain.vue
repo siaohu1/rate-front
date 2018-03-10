@@ -20,7 +20,7 @@
                     <span>项目评级</span>
                   </header>
                   <section class="plate-content" v-for="(list,index) in HottestList" @click="clickView(list.id)">
-                    <router-link :to="`/arcblock?id=${list.id}`">
+                    <!--<router-link :to="`/arcblock?id=${list.id}`">-->
                       <section class="items-list">
                         <section class="items">
                           <section class="items-name">
@@ -42,12 +42,12 @@
                               <el-button type="info" size="mini">真格领头</el-button>
                             </section>
                             <article class="home-click">
-                              <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.voteCount}}</span></p>
+                              <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.pageView}}</span></p>
                             </article>
                           </section>
                         </section>
                       </section>
-                    </router-link>
+                    <!--</router-link>-->
                   </section>
                 </section>
               </section>
@@ -85,7 +85,7 @@
                             <el-button type="info" size="mini">真格领头</el-button>
                           </section>
                           <article class="home-click">
-                            <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.voteCount}}</span></p>
+                            <p><img src="../../assets/eys.png" alt="" class="home-eye"><span>{{list.pageView}}</span></p>
                           </article>
                         </section>
                       </section>

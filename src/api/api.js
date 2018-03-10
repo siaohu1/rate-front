@@ -11,7 +11,13 @@ const instance = axios.create({
     return qs.stringify({
       ...data,
       sys: 'admin',
-      token: 'tgkGGr9lWkPJqL4yJaLQwekJclOuM6O+lACXInVouRpra5t0WWPInIZjzeybmANo'
+      token: 'x1eTCh5cJDUl6FET7t0WI%2FlHCM4yENn3XnZ2V%2BqPwxYcoYOWhSFraEZiBLRDGhH8',
+      systemVersion:7,
+      pVersion:1,
+      version:1,
+      system:'win',
+      channel : 1,
+      mobileInfo:'rate-front',
     })
   }]
 })
@@ -40,7 +46,7 @@ export const viewClick = params => {
 export const projectDetail = params => {
   return instance.post('rate/user/projectDetail', params)
 }
-//项目搜索
+//项目搜索(未实现)
 export const projectSearch = params => {
   return instance.post('/user/rate/search', params)
 }
